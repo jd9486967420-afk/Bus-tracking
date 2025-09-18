@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multi-Bus Live Tracker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Opening Page -->
+  <div id="welcome">
+    <h1>🚌 Multi-Bus Tracker</h1>
+    <p>Enter trip and press <strong>Search Bus</strong></p>
+    <form id="tripForm">
+      <input id="fromPlace" placeholder="From (e.g. MG Road)" required />
+      <input id="toPlace" placeholder="To (e.g. Kothanur)" required />
+      <button type="submit">Search Bus</button>
+    </form>
+  </div>
+
+  <!-- Map Page -->
+  <div id="mapPage">
+    <header>
+      <h2 id="routeTitle">Route</h2>
+    </header>
+    <div id="map"></div>
+
+    <!-- Sidebar with buses -->
+    <div class="bus-list" id="busList" aria-live="polite">
+      <strong>Active buses</strong>
+      <div id="busListItems" class="small"></div>
+      <div style="margin-top:8px;" class="small">Powered by: Demo • Chalo • WhereIsMyTrain</div>
+    </div>
+  </div>
+
+  <!-- Leaflet & script -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
