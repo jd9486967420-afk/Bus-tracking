@@ -57,7 +57,7 @@ function initBuses(){
   buses.forEach(b => b.marker && map.removeLayer(b.marker));
   buses = [];
 
-  const baseIds = ['Bus 101','Bus 102','Bus 103','Bus 201'];
+  const baseIds = ['14d sivajinagar','13E MMroad','306 cleveland',' 16g MG road'];
   baseIds.forEach((id,i) => {
     const startIdx = (i * Math.floor(route.length / baseIds.length)) % route.length;
     const speedKmph = 20 + (i*5);
